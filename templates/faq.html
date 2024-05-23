@@ -1,0 +1,243 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="{% static 'css/preloader.css' %}">
+    <script src="{% static 'js/preloader.js' %}"></script>
+
+    <title>FAQ</title>
+    <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}" />
+
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  </head>
+  <style>
+            .btn-primary {
+            background-color: #FF6347; /*tomato color for button */
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #FF4500; /*orangered color for button on hover */
+        }
+        .navbar-brand span {
+            font-weight: 700;
+        }
+  .accordion-item {
+    margin-bottom: 20px;
+}
+.accordion-button {
+    background-color: #f8f9fa;
+    color: #000;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.accordion-button:hover {
+    background-color: #e9ecef;
+}
+.accordion-button:focus {
+    box-shadow: none;
+}
+.accordion-button.collapsed {
+    background-color: #fff;
+}
+.accordion-body {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+</style>
+  <body>
+    <div class="hero_area">
+            <!-- Preloader section -->
+            <div class="preloader">
+              <img src="{% static 'images/preloader.gif' %}" alt="Preloader" />
+          </div>
+      <!-- header section strats -->
+      <header class="header_section" style="font-family: 'Poppins;">
+                <div class="header_bottom">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg custom_nav-container">
+                    <a class="navbar-brand" href="">
+                        <span>Service Ease</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class=""></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'home' %}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'services' %}">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'faq' %}">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'register' %}">
+                                    <button type="button" class="btn btn-primary rounded-pill py-2 px-4">Login/Signup</button>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+      <!-- end header section -->
+    </div>
+
+    <section class="faq_section layout_padding">
+        <div class="container">
+            <div class="heading_container text-center">
+                <h2 class="mt-1">Frequently Asked Questions</h2>
+            </div>
+            <div class="accordion" id="accordionFaq">
+                <!-- FAQ Item 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne"
+                            aria-expanded="true" aria-controls="faqCollapseOne">
+                            What is Service Ease?
+                        </button>
+                    </h2>
+                    <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqOne"
+                        data-bs-parent="#accordionFaq">
+                        <div class="accordion-body">
+                          ServiceEase is an online platform that connects users with skilled and reliable electricians and plumbers for various home service needs.
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- FAQ Item 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqTwo">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo"
+                            aria-expanded="true" aria-controls="faqCollapseTwo">
+                            How does ServiceEase work?
+                        </button>
+                    </h2>
+                    <div id="faqCollapseTwo" class="accordion-collapse collapse show" aria-labelledby="faqTwo"
+                        data-bs-parent="#accordionFaq">
+                        <div class="accordion-body">
+                          Users can browse through our platform, submit service requests, and choose from a list of qualified electricians and plumbers. Service providers will then contact the user directly to discuss the details and schedule the service.
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- FAQ Item 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqThree">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree"
+                            aria-expanded="true" aria-controls="faqCollapseThree">
+                            Is ServiceEase available in my area?
+                        </button>
+                    </h2>
+                    <div id="faqCollapseThree" class="accordion-collapse collapse show" aria-labelledby="faqThree"
+                        data-bs-parent="#accordionFaq">
+                        <div class="accordion-body">
+                          We are continuously expanding our services. Please check our website or contact our support team to confirm if we currently operate in your location.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqFour">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour"
+                            aria-expanded="true" aria-controls="faqCollapseFour">
+                            How do I hire an electrician or plumber through ServiceEase?
+                        </button>
+                    </h2>
+                    <div id="faqCollapseFour" class="accordion-collapse collapse show" aria-labelledby="faqFour"
+                        data-bs-parent="#accordionFaq">
+                        <div class="accordion-body">
+                          Simply create an account, submit a service request specifying your needs, and choose from the available service providers. Once you make a selection, the chosen professional will contact you to finalize the details.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="info_section">
+      <div class="container">
+        <h4>Get In Touch</h4>
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <div class="info_items">
+              <div class="row">
+                <div class="col-md-4">
+                  <a href="">
+                    <div class="item">
+                      <div class="img-box">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                      </div>
+                      <p>Kathmandu, Nepal </p>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-4">
+                  <a href="">
+                    <div class="item">
+                      <div class="img-box">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                      </div>
+                      <p>+977-9862406734</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-4">
+                  <a href="">
+                    <div class="item">
+                      <div class="img-box">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                      </div>
+                      <p>serviceease6@gmail.com</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <!-- Add any other scripts here -->
+        <script src="{% static 'js/jquery-3.4.1.min.js'%}"></script>
+    <script src="{% static 'js/bootstrap.js'%}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="{% static 'js/custom.js'%}"></script>
+</html>
